@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Halp - ToDo</title>
+		<link rel="icon" type="img/png" href="resources/halpIcon.png">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Rokkitt:500,600,700" rel="stylesheet">
+		<link href="css/main.min.css" rel="stylesheet" type="text/css">
+	</head>
+	<body>
+		<nav>
+			<img src="resources/defaultUser.jpg" alt="User profile photo">
+			<button type="button" name="button" onclick="logOut()">Log Out</button>
+		</nav>
+
+		<div id="wrapper">
+			<div id="add">
+				<button type="button" name="button" title="Add a new todo item to your list">
+					<span></span>
+					<span></span>
+				</button>
+				<input id="inputData" type="text" name="" value="" required placeholder="Your todo item...">
+				<button type="button" name="button" title="Cancel">
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+
+			<div id="intro">
+				<button type="button" name="button" onclick="logIn()">Sign Up</button>
+				<button type="button" name="button" onclick="logIn()">Login</button>
+			</div>
+
+			<span></span>
+
+			<!-- This is where the todos are placed -->
+
+		</div>
+
+
+		<!-- Firebase -->
+		<script src="https://www.gstatic.com/firebasejs/5.5.9/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase-firestore.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+		<script>
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyBy_zKgFWpbXabVTl7KVMEp-jeG2K1NSHQ",
+			authDomain: "halp-todo.firebaseapp.com",
+			databaseURL: "https://halp-todo.firebaseio.com",
+			projectId: "halp-todo",
+			storageBucket: "halp-todo.appspot.com",
+			messagingSenderId: "593091065449"
+		};
+		firebase.initializeApp(config);
+		</script>
+
+
+		<!-- UX -->
+		<script type="text/javascript" src="js/ux.js"></script>
+
+
+		<!-- User and Data -->
+		<script type="text/javascript" src="js/user.js"></script>
+	</body>
+</html>
